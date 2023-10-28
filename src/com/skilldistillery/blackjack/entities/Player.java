@@ -27,4 +27,12 @@ public class Player {
 	public Hand getHand() {
 		return hand;
 	}
+	
+	public int getHandValue() {
+		return hand.getHandValue();
+	}
+	
+	public boolean isBust() {
+		return hand.isBust();
+	}
 }

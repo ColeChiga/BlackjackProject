@@ -19,11 +19,13 @@ public class Dealer extends Player {
 	}
 	
 	public boolean ruleOfSeventeen(){
-		if (hand.getHandValue() >= 17) {
-			return playerHits("stand");
+		if (hand.getHandValue() <= 17) {
+			System.out.println("The dealer has hit.");
+			return playerHits("hit");
 		}
 		else {
-			return playerHits("Hit");
+			System.out.println("The dealer is forced to stand.");
+			return playerHits("stand");
 		}
 	}
 
