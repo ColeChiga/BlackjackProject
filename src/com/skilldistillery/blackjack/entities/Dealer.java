@@ -61,18 +61,31 @@ public class Dealer extends Player {
 	}
 	
 	
-	public void rebuildDeck(){
-		while(hand.getHandValue()!=0) {
-		Card card = hand.clear();
-		deck.addCard(card);
-		}
-	}
-	
 	public void rebuildDeck(Hand playerHand){
+		while(hand.getHandValue()!=0) {
+			Card card = hand.clear();
+			deck.addCard(card);
+			}
+		
 		while(playerHand.getHandValue()!=0) {
 		Card card = playerHand.clear();
 		deck.addCard(card);
 		}
+	}
+
+	public void determineWinner(Player player) {
+		System.out.println();
+		if (player.isBust()) {
+			System.out.println("Player loses because the player busted");
+		} else if (this.isBust()) {
+			System.out.println("Player wins because the dealer busted");
+		} else if (player.getHandValue() == this.getHandValue()) {
+			System.out.println("The game was a tie");
+		} else if (player.getHandValue() > this.getHandValue()) {
+			System.out.println("Player wins! The Player's hand was higher without going over 21.");
+		} else if (player.getHandValue() < this.getHandValue()) {
+			System.out.println("Player loses! The dealer's hand was higher without going over 21.");
+		}		
 	}
 	
 	

@@ -19,7 +19,7 @@ public class PlayingCardDesign {
 		String rankString = rank.toString();
 		char rankChar = ' ';
 
-		if (rankString.equals("Jack") || rankString.equals("Queen") || rankString.equals("Ace")) {
+		if (rankString.equals("Jack") || rankString.equals("Queen") || rankString.equals("King") || rankString.equals("Ace")) {
 			rankChar = rankString.charAt(0);
 		} else if (rankString.equals("Ten")) {
 			this.value = 10;

@@ -36,7 +36,8 @@ public class BlackjackApp {
 				play = play(true);
 			} while (play);
 
-			winner();
+			
+			dealer.determineWinner(player);
 			cleanUp();
 			startGame = continuePlaying();
 		}
@@ -103,7 +104,7 @@ public class BlackjackApp {
 	}
 
 	private void cleanUp() {
-		dealer.rebuildDeck();
+		
 		dealer.rebuildDeck(player.getHand());
 		System.out.println("The game has been cleaned up");
 	}
@@ -119,20 +120,6 @@ public class BlackjackApp {
 		}
 	}
 
-	private void winner() {
-		System.out.println();
-		if (player.isBust()) {
-			System.out.println("Player loses because the player busted");
-		} else if (dealer.isBust()) {
-			System.out.println("Player wins because the dealer busted");
-		} else if (player.getHandValue() == dealer.getHandValue()) {
-			System.out.println("The game was a tie");
-		} else if (player.getHandValue() > dealer.getHandValue()) {
-			System.out.println("Player wins! The Player's hand was higher without going over 21.");
-		} else if (player.getHandValue() < dealer.getHandValue()) {
-			System.out.println("Player loses! The dealer's hand was higher without going over 21.");
-		}
-	}
 
 	public void dealCards() {
 
