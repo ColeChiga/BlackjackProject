@@ -12,6 +12,8 @@ When the player's turn is over it becomes the dealer's turn. the dealer reveal t
 
 Once the dealer's turn is over the winner is determined and announced, then the game is cleaned up, cards are added back to the deck, and the player can choose to play again. 
 
+For best game play, expand your console as much as you can vertically.
+
 # Tech used
 
 Java, OOP, Eclipse

@@ -19,6 +19,7 @@ public class Player {
 		return choice;
 	}
 	
+
 	public boolean playerHits(String choice) {
 		if (choice.equals("hit")) {
 			return true;
@@ -45,5 +46,10 @@ public class Player {
 	
 	public boolean isBust() {
 		return hand.isBust();
+	}
+	
+	@Override
+	public String toString() {
+		return "Player's hand: " + hand.toString();
 	}
 }

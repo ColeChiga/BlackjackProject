@@ -33,6 +33,9 @@ public class BlackjackApp {
 			System.out.println("\n\n");
 
 			do {
+				if (player.isBust()) {
+					break;
+				}
 				play = play(true);
 			} while (play);
 
