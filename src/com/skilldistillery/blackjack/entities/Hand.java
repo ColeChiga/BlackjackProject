@@ -15,8 +15,8 @@ public abstract class Hand {
 		cards.add(card);
 	}
 	
-	public void clear() {
-		cards.removeAll(cards);
+	public Card clear() {
+		return cards.remove(0);
 	}
 	
 	public String toString() {

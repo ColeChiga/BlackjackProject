@@ -49,8 +49,19 @@ public class Dealer extends Player {
 		}
 	}
 	
+	public void rebuildDeck(){
+		while(hand.getHandValue()!=0) {
+		Card card = hand.clear();
+		deck.addCard(card);
+		}
+	}
 	
-	
+	public void rebuildDeck(Hand playerHand){
+		while(playerHand.getHandValue()!=0) {
+		Card card = playerHand.clear();
+		deck.addCard(card);
+		}
+	}
 	
 	
 }

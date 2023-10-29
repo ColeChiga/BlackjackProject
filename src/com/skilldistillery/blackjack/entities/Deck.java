@@ -44,4 +44,8 @@ public class Deck {
 	public void shuffle() {
 		Collections.shuffle(deckOfCards);
 	}
+	
+	public void addCard(Card card) {
+		deckOfCards.add(card);
+	}
 }
