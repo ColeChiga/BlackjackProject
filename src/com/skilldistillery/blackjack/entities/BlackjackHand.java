@@ -34,7 +34,13 @@ public class BlackjackHand extends Hand {
 	}
 
 	public boolean isHard(){
-		// determine if an ace is hard
+		if (getHandValue() < 21) {
+			for (Card card : cards) {
+				if (card.toString().equals("Ace")) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 	

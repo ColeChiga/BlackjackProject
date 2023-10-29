@@ -18,8 +18,16 @@ public class Dealer extends Player {
 		return card;
 	}
 	
+	public String playersMove() {
+		if (ruleOfSeventeen()) {
+			return super.playersMove("hit");
+		} else {
+			return super.playersMove("stand");
+		}
+	}
+	
 	public boolean ruleOfSeventeen(){
-		if (hand.getHandValue() <= 17) {
+		if (hand.getHandValue() < 17) {
 			System.out.println("The dealer has hit.");
 			return playerHits("hit");
 		}
@@ -35,19 +43,23 @@ public class Dealer extends Player {
 	
 	
 	public void showHand(boolean dealersTurn) {
-		System.out.print("The dealer has ");
 		
 		if (dealersTurn) {
-		System.out.println(hand.toString());
+		System.out.println("The dealer has "+ hand.toString());
 		System.out.println("showing a total of " + hand.getHandValue());
 
 		}
 		else {
-			System.out.println(hand.viewACard() + " and a hidden card");
+			System.out.println("The dealer has ["+ hand.viewACard() + " and a hidden card]");
 			System.out.println("showing a total of " + hand.viewACard().getValue());
 
 		}
 	}
+	
+	public void announceCard(String currentPlayer, Card card) {
+		System.out.println(currentPlayer + " recieved " + card.toString() + "\n");
+	}
+	
 	
 	public void rebuildDeck(){
 		while(hand.getHandValue()!=0) {

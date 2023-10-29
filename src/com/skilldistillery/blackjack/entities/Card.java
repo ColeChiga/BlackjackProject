@@ -6,10 +6,13 @@ public class Card {
 	Suit suit;
 	Rank rank;
 	
+	PlayingCardDesign design;
 	
 	public Card(Suit suit, Rank rank) {
 		this.suit = suit;
 		this.rank = rank;
+
+		this.design = new PlayingCardDesign(suit, rank);
 	}
 
 	@Override
@@ -35,6 +38,9 @@ public class Card {
 
 	@Override
 	public String toString() {
+		
+		design.printCard();
+		
 		return "the "+ rank + " of " + suit ;
 	}
 	
