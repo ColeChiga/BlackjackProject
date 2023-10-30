@@ -8,7 +8,7 @@ In this game the player is dealt two cards from a deck and is shown the total va
 
 The player then gets to decide if they want to hit or stand (pressing either 1 or 2, or typing hit or stand). If the player hits they are given another card and can choose again. The player's turn continues until they stand, get a total of 21, or get a total over 21. 
 
-When the player's turn is over it becomes the dealer's turn. the dealer reveal their other card and then plays by the rule of seventeen. If the total value of their cards is less than 17 they hit, otherwise they stand. 
+When the player's turn is over it becomes the dealer's turn, unless the player busted in which the game is over. The dealer reveal their other card and then plays by the rule of seventeen. If the total value of their cards is less than 17 they hit, otherwise they stand. 
 
 Once the dealer's turn is over the winner is determined and announced, then the game is cleaned up, cards are added back to the deck, and the player can choose to play again. 
 
